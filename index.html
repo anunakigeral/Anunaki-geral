@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anunaki Geral – Sistemas Estratégicos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+    body { background-color: #0b0c10; color: #f8f9fa; font-family: 'Segoe UI', sans-serif; text-align: center; }
+    .banner img { width: 100%; max-width: 700px; margin-top: 20px; }
+    .section { padding: 40px 15px; }
+    .btn-custom {
+      background-color: #ffd700; color: #000; font-weight: bold;
+      border: none; padding: 12px 20px; margin: 10px; border-radius: 30px;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-pagamento {
+      background-color: #ffd700; color: #000; font-weight: bold;
+      border: none; padding: 10px 15px; margin: 10px; border-radius: 30px;
+    }
+    footer { padding: 30px 20px; font-size: 0.95rem; color: #ccc; border-top: 1px solid #333; }
+    #lang-selector {
+      position: fixed; bottom: 20px; right: 20px; z-index: 999;
+    }
+    #lang-selector select {
+      padding: 10px; border-radius: 10px; font-weight: bold;
+      background-color: #ffd700; color: #000;
+    }
+  
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollTexto 20s linear infinite;
+}
+.scroll-text span {
+  display: inline-block;
+  padding-right: 100px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #ffd700;
+}
+@keyframes scrollTexto {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+<style>
+  @keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes abrirFechar {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-15deg); }
+  }
+  @keyframes scrollTexto {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+  .bola-animada {
+    display: inline-block;
+    animation: girar 4s linear infinite;
+  }
+  .cadeado-animado {
+    display: inline-block;
+    animation: abrirFechar 2s ease-in-out infinite;
+  }
+  .texto-correndo {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  .texto-correndo span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollTexto 15s linear infinite;
+  }
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+<style>
+  @keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes abrirFechar {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-15deg); }
+  }
+  @keyframes pulsar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.08); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes bordaVerde {
+    0%, 100% {
+      box-shadow: 0 0 0px rgba(0,255,0,0);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(0,255,0,0.5);
+    }
+  }
+  .bola-animada {
+    display: inline-block;
+    animation: girar 3s linear infinite;
+  }
+  .cadeado-animado {
+    display: inline-block;
+    animation: abrirFechar 2.5s ease-in-out infinite;
+  }
+  .pulsante {
+    display: inline-block;
+    animation: pulsar 2.2s ease-in-out infinite;
+  }
+  .btn-pagamento-estilizado {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    animation: pulsar 4s ease-in-out infinite, bordaVerde 4s ease-in-out infinite;
+  }
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}
+</style>
+<style>.d-none { display: none !important; }</style>
+<style>
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+.reveal.active { opacity: 1; transform: translateY(0px); }
+</style>
+<script>
+window.addEventListener("scroll", function() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      reveals[i].classList.add("active");
+    }
+  }
+});
+</script>
+</head>
+<body>
+<header style="position:fixed;top:0;width:100%;background:#000;z-index:999;padding:10px 0;box-shadow:0 2px 5px rgba(0,0,0,0.5);">
+<nav style="text-align:center;">
+<a href="#inicio" style="margin: 0 15px; color:white; text-decoration:none;">Início</a>
+<a href="#planos" style="margin: 0 15px; color:white; text-decoration:none;">Ver Planos</a>
+<a href="#apk" style="margin: 0 15px; color:white; text-decoration:none;">Baixar APK</a>
+<a href="https://wa.me/258847801855" style="margin: 0 15px; color:white; text-decoration:none;" target="_blank">Contato</a>
+</nav>
+</header>
+<div style="height:60px;"></div>
+<div class="banner">
+<img alt="Banner Geral" src="banner.png"/>
+</div>
+<div class="section">
+<h2 id="acesso_rapido">🔓 Acesso Rápido</h2>
+<p id="instrucao">Escolha o aplicativo para baixar:</p>
+<div>
+<a class="btn-custom" href="https://anunakigeral.netlify.app/downloads/protocolo-anunaki.apk" id="btnAnunaki"><span class="bola-animada"><span class="bola-animada">⚽</span></span> Protocolo Anunaki V3</a>
+<a class="btn-custom" href="https://anunakigeral.netlify.app/downloads/anunaki-vault.apk" id="btnVault"><span class="cadeado-animado"><span class="cadeado-animado">🔐</span></span> Anunaki Vault Cofre Digital</a>
+</div>
+</div>
+<div class="section">
+<h3 id="pagamento">💳 Métodos de Pagamento</h3>
+<p id="confirme">Confirme os dados antes de transferir. Pagamento direto e seguro.</p>
+<div><a href="tel:*150*01*847801855%23" style="background-color:#D71920; color:#fff; font-weight:bold; padding:12px 20px; margin:10px; border-radius:30px; min-width:220px; display:inline-block; text-decoration:none;">📲 Pagar via M-Pesa (USSD)</a><a href="tel:*898*867801856%23" style="background-color:#FFD700; color:#000; font-weight:bold; padding:12px 20px; margin:10px; border-radius:30px; min-width:220px; display:inline-block; text-decoration:none;">📲 Pagar via Emola (USSD)</a>
+<a class="btn-custom" href="mailto:michelferreira58354@gmail.com?subject=Solicitação+de+dados+do+Standard+Bank" style="background-color:#002F6C; color:#fff; font-weight:bold; padding:12px 20px; margin:10px; border-radius:30px; min-width:180px; display:inline-block; text-decoration:none;">🏦 Ver dados do Standard Bank</a>
+<a href="https://www.paypal.me/michelferreira58354@gmail.com" style="background-color:#0070BA; color:#fff; font-weight:bold; padding:12px 20px; margin:10px; border-radius:30px; min-width:180px; display:inline-block; text-decoration:none;" target="_blank">💰 Pagar com PayPal</a></div>
+</div>
+<div class="section">
+<h3 id="sobre_app">📜 Sobre os Aplicativos</h3>
+<p id="descricao">
+      O Anunaki Vault é um cofre digital desenvolvido para proteger documentos, senhas e estratégias com máxima segurança.<br/>
+      O Protocolo Anunaki V3 é um sistema tático de apostas com inteligência artificial e 30 camadas de análise.
+    </p>
+<div class="scroll-container">
+<div class="scroll-text">
+<span>“Se não está na PlayStore… é porque é estratégico demais para ser público.”</span>
+<span>“Se não está na PlayStore… é porque é estratégico demais para ser público.”</span>
+</div>
+</div>
+</div>
+<!-- Bloco WhatsApp atualizado -->
+<div style="margin-top: 30px; text-align: center;">
+<a href="https://wa.me/258847801855" target="_blank" title="Fale Conosco">
+<img alt="WhatsApp" height="60" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="border-radius: 50%; animation: shake 1.5s infinite;" width="60"/>
+</a>
+<div style="margin-top: 6px; font-size: 15px; color: #25D366; font-weight: bold;">WhatsApp</div>
+</div>
+<div class="section" style="text-align:center;">
+<button class="btn-custom" onclick="document.getElementById('planosBox').classList.toggle('d-none');" style="background-color:#17a2b8; color:#fff; font-weight:bold;">
+💼 Ver Planos e Custos
+</button>
+<div class="d-none mt-4" id="planosBox" style="background:#1a1a1a; border:2px solid #17a2b8; padding:20px; border-radius:10px; max-width:600px; margin:auto;">
+<h4>📦 Planos de Acesso</h4>
+<h5>⚽ Protocolo Anunaki V3 Football</h5>
+<ul style="list-style:none; padding-left:0;">
+<li>📅 7 dias – 950 MT</li>
+<li>📅 15 dias – 1850 MT</li>
+<li>📅 30 dias – 3500 MT</li>
+</ul>
+<h5>🔐 Anunaki Vault – Cofre Digital</h5>
+<p>💳 Acesso vitalício – 1850 MT</p>
+</div>
+</div>
+<div id="lang-selector">
+<select onchange="trocarIdioma(this.value)">
+<option value="pt">🇵🇹 Português</option>
+<option value="en">🇺🇸 English</option>
+<option value="fr">🇫🇷 Français</option>
+<option value="es">🇪🇸 Español</option>
+</select>
+</div>
+<script>
+    const traducao = {
+      pt: {
+        acesso_rapido: "🔓 Acesso Rápido",
+        instrucao: "Escolha o aplicativo para baixar:",
+        btnAnunaki: "⚽ Protocolo Anunaki V3",
+        btnVault: "🔐 Anunaki Vault Cofre Digital",
+        pagamento: "💳 Métodos de Pagamento",
+        confirme: "Confirme os dados antes de transferir. Pagamento direto e seguro.",
+        sobre_app: "📜 Sobre os Aplicativos",
+        descricao: "O Anunaki Vault é um cofre digital desenvolvido para proteger documentos, senhas e estratégias com máxima segurança.\nO Protocolo Anunaki V3 é um sistema tático de apostas com inteligência artificial e 30 camadas de análise.",
+        aviso: "⚠️ Este aplicativo não está na Play Store. Instale por download direto autorizado por Michel Ferreira.",
+        direitos: "🔐 Protocolo Anunaki Vault – Tecnologia exclusiva | Direitos reservados a Michel Ferreira",
+        frase: "“Mais que sorte, é tática. A mente brilhante vence. Sempre.”"
+      },
+      en: {
+        acesso_rapido: "🔓 Quick Access",
+        instrucao: "Choose the app to download:",
+        btnAnunaki: "⚽ Anunaki Protocol V3",
+        btnVault: "🔐 Anunaki Vault Digital Safe",
+        pagamento: "💳 Payment Methods",
+        confirme: "Confirm details before transferring. Direct and secure payment.",
+        sobre_app: "📜 About the Apps",
+        descricao: "Anunaki Vault is a digital safe developed to protect documents, passwords and strategies with maximum security.\nAnunaki Protocol V3 is a tactical betting system using AI and 30 layers of analysis.",
+        aviso: "⚠️ This app is not on the Play Store. Install via direct download authorized by Michel Ferreira.",
+        direitos: "🔐 Anunaki Vault Protocol – Exclusive technology | All rights reserved to Michel Ferreira",
+        frase: "“More than luck, it's strategy. The brilliant mind always wins.”"
+      },
+      fr: {
+        acesso_rapido: "🔓 Accès rapide",
+        instrucao: "Choisissez l'application à télécharger :",
+        btnAnunaki: "⚽ Protocole Anunaki V3",
+        btnVault: "🔐 Anunaki Vault Coffre Numérique",
+        pagamento: "💳 Méthodes de paiement",
+        confirme: "Confirmez les données avant le transfert. Paiement direct et sécurisé.",
+        sobre_app: "📜 À propos des applications",
+        descricao: "Anunaki Vault est un coffre numérique conçu pour protéger les documents, mots de passe et stratégies en toute sécurité.\nLe Protocole Anunaki V3 est un système de paris tactique avec IA et 30 couches d'analyse.",
+        aviso: "⚠️ Cette application n'est pas sur le Play Store. Installez-la via un téléchargement direct autorisé par Michel Ferreira.",
+        direitos: "🔐 Protocole Anunaki Vault – Technologie exclusive | Droits réservés à Michel Ferreira",
+        frase: "“Plus que de la chance, c'est de la stratégie. L'esprit brillant gagne toujours.”"
+      },
+      es: {
+        acesso_rapido: "🔓 Acceso Rápido",
+        instrucao: "Elija la aplicación para descargar:",
+        btnAnunaki: "⚽ Protocolo Anunaki V3",
+        btnVault: "🔐 Anunaki Vault Caja Fuerte",
+        pagamento: "💳 Métodos de Pago",
+        confirme: "Confirme los datos antes de transferir. Pago directo y seguro.",
+        sobre_app: "📜 Sobre las Aplicaciones",
+        descricao: "Anunaki Vault es una caja fuerte digital diseñada para proteger documentos, contraseñas y estrategias.\nEl Protocolo Anunaki V3 es un sistema de apuestas tácticas con IA y 30 capas de análisis.",
+        aviso: "⚠️ Esta aplicación no está en Play Store. Instálela mediante descarga directa autorizada por Michel Ferreira.",
+        direitos: "🔐 Protocolo Anunaki Vault – Tecnología exclusiva | Derechos reservados a Michel Ferreira",
+        frase: "“Más que suerte, es estrategia. La mente brillante siempre gana.”"
+      }
+    };
+
+    function trocarIdioma(idioma) {
+      const t = traducao[idioma];
+      for (let id in t) {
+        const el = document.getElementById(id);
+        if (el) el.innerText = t[id].replace(/\n/g, "\n");
+      }
+    }
+
+    window.onload = function () {
+      const lang = navigator.language.slice(0, 2);
+      if (traducao[lang]) {
+        document.querySelector("#lang-selector select").value = lang;
+        trocarIdioma(lang);
+      }
+    };
+  </script>
+<a href="https://wa.me/258847801855" style="
+position:fixed;
+bottom:80px;
+right:20px;
+z-index:1000;
+background:#25D366;
+border-radius:50%;
+width:60px;
+height:60px;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+animation:pulse 2s infinite;" target="_blank">
+<img alt="WhatsApp" src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" style="width:30px;"/>
+</a>
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+</style>
+
+<style>.d-none{display:none;}</style>
+<section class="reveal" style="background:#111; padding:30px; text-align:center; color:white;">
+<h3>📩 Demonstre Interesse</h3>
+<form action="https://formspree.io/f/mnqevzqw" method="POST" style="max-width:400px;margin:auto;">
+<input name="name" placeholder="Seu nome" required="" style="width:100%;padding:10px;margin:10px 0;" type="text"/>
+<input name="email" placeholder="Seu e-mail" required="" style="width:100%;padding:10px;margin:10px 0;" type="email"/>
+<textarea name="message" placeholder="Por que tem interesse?" rows="3" style="width:100%;padding:10px;margin:10px 0;"></textarea>
+<button style="background:#17a2b8; color:white; padding:10px 20px; border:none; border-radius:5px;" type="submit">Enviar</button>
+</form>
+</section>
+<section class="reveal" style="text-align:center; padding:30px;">
+<h3>🎬 Veja a Demonstração</h3>
+<video controls="" style="max-width:600px; border-radius:10px; box-shadow:0 0 10px #000;" width="80%">
+<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+</section>
+<div style="text-align:center; margin-top:20px;">
+<p style="color:#ccc; font-size:14px;">📈 Este site já teve <span id="contadorAcessos">12.843</span> acessos desde o lançamento.</p>
+</div>
+<footer>© 2025 Anunaki Geral – Todos os projetos pertencem a Michel A. Caetano Ferreira. Todos os direitos reservados.</footer></body>
+</html>
